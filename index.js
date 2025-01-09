@@ -21,7 +21,7 @@ app.post("/webhook", (req, res) => {
       console.log("Cobranças não encontradas no payload.");
     }
 
-    res.status(200).send("Notification received");
+    res.status(200).send(notification);
   } catch (error) {
     console.error("Erro ao processar a notificação:", error);
     res.status(500).send("Internal Server Error");
