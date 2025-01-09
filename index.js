@@ -6,6 +6,10 @@ app.use(express.json());
 
 app.post("/webhook", (req, res) => {
   try {
+    console.log("Recebendo notificação de pagamento:");
+    console.log(req.body);
+    console.log("----------------------------------------\n\n");
+
     const notification = req.body;
 
     if (notification.charges && notification.charges.length > 0) {
