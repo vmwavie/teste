@@ -10,7 +10,8 @@ app.post("/webhook", (req, res) => {
     console.log(req.headers);
     console.log("----------------------------------------\n\n");
     console.log("Recebendo notificação de pagamento:");
-    console.log(req.body);
+    const body = JSON.parse(req.body);
+    console.log(body);
     console.log("----------------------------------------\n\n");
 
     const notification = req.body;
