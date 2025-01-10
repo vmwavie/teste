@@ -6,6 +6,9 @@ app.use(express.json());
 
 app.post("/webhook", (req, res) => {
   try {
+    console.log('headers')
+    console.log(req.headers);
+    console.log("----------------------------------------\n\n");
     console.log("Recebendo notificação de pagamento:");
     console.log(req.body);
     console.log("----------------------------------------\n\n");
