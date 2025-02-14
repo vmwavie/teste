@@ -4,6 +4,19 @@ const app = express();
 
 app.use(express.json());
 
+async.get("/webhook", (req, res) => {
+  console.log("-----------------get-----------------------\n\n");
+
+  console.log("---------------------query-------------------\n\n");
+  console.log(req.query)
+  console.log("---------------------body-------------------\n\n");
+  console.log(req.body)
+  console.log("---------------------headers-------------------\n\n");
+  console.log(req.headers)
+  console.log("---------------------full-------------------\n\n");
+  console.log(req)
+})
+
 app.post("/webhook", (req, res) => {
   try {
     console.log('headers')
