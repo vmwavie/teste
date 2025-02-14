@@ -4,7 +4,7 @@ const app = express();
 
 app.use(express.json());
 
-async.get("/webhook", (req, res) => {
+app.get("/webhook", (req, res) => {
   console.log("-----------------get-----------------------\n\n");
 
   console.log("---------------------query-------------------\n\n");
